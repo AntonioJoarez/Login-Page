@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+   body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   flex-direction: column;
+   gap: 30px;
+   background: #1d2b3a;  
+}
+
+.InputBox {
+   position: relative;
+    width: 250px;
+}
+.InputBox input {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #1d2b3a;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.InputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+.InputBox input:valid ~ span,
+.InputBox input:focus ~ span {
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #1d2b3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+    
+}
+.InputBox input:valid ,
+.InputBox input:focus {
+    border: 1px solid #00dfc4;
+    box-shadow: 0 0 5px;
+    
+}
+.entrar {
+    position: relative;
+    background:rgb(160, 153, 153, .20);
+    color: rgb(160, 153, 153, .50);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 39px;
+    transition: 0.5s;
+}
+.entrar:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0  0 10px var(--clr);
+}
+ .entrar::before {
+   content: '';
+   position: absolute;
+   inset: 2px;
+   background: #1d2b3a; 
+   color: var(--clr);
+}
+
+ a span {
+    position: relative;
+    z-index: 1;
+}
+a i {
+    position: absolute;
+    inset: 0;
+    display: block;  
+}
+ a i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #1d2b3a;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+ a:hover i::before {
+    width: 20px;
+    left: 20%; 
+}
+
+a i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #1d2b3a;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+ a:hover i::after {
+    width: 20px;
+    left: 80%; 
+}
+.LineOfText {
+    border-right: 2px solid rgb(255, 255, 255, .75) ;
+    color: #00dfc4;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-shadow: 0 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.typing-animation {
+    animation: blinkCursor 500ms steps(60) infinite normal, typing 4s steps(60) 2s normal both;
+}
+@keyframes blinkCursor{
+    from {
+        border-right-color: rgb(255, 255, 255, .75)
+    }
+    to {
+        border-right-color:transparent;
+    }
+}
+@keyframes  typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 14.5em;
+    }
+}
+.ContainerForget {
+    clear: both;
+    display: block;
+    align-items: left;
+
+}
+.NoAccount {
+    text-decoration: underline;
+    text-align: left;
+    color: rgb(255, 255, 255, .15);
+    font-size: 12px;
+}
+.ForgetPassword {
+    text-decoration: underline;
+    text-align: left;
+    color: rgb(255, 255, 255, .15);
+    font-size: 12px;
+}
+.NoAccount:hover {
+    transition: 1s;
+    color: #00dfc4;
+}
+.ForgetPassword:hover {
+    transition: 1s;
+    color: #00dfc4;
+}
+
+
